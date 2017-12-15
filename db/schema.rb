@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 20171215154356) do
     t.boolean "completed?"
     t.datetime "completed_at"
     t.integer "tenant_id"
-    t.integer "manager_id"
+    t.integer "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["manager_id"], name: "index_maintenance_requests_on_manager_id"
+    t.index ["property_id"], name: "index_maintenance_requests_on_property_id"
     t.index ["tenant_id"], name: "index_maintenance_requests_on_tenant_id"
   end
 
