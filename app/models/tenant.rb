@@ -4,5 +4,5 @@ class Tenant < ApplicationRecord
   has_many :maintenance_requests
   has_many :meetings
 
-  has_secure_password
+  # has_secure_password
 end

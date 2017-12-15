@@ -55,3 +55,22 @@ Meetings (between manager and tenent)
 	- date_time
 	- manager_id
 	- tenent_id
+
+Routes
+	- homepage - Tenant
+		- property name
+		- tenant name
+		- current bill
+			- current bill due date 
+			- current bill amount
+			- button to pay bill if unpaid or label that says "Paid"
+		- next scheduled meeting
+			- link to all scheduled meetings
+		- list of active maintenance requests
+			- link to all maintenance requests
+
+
+
+
+
+
