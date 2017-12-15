@@ -25,12 +25,12 @@ property
 	- available_rooms
 	- belongs_to a property manager
 	- has_many tenants
-account
+<!-- account
 	- manager_id
 	- tenent_id
 	- property_id
 	- bills
-	- service_requests
+	- service_requests -->
 Maintenance requests
 	- subject
 	- description
