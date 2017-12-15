@@ -8,7 +8,6 @@ Manager
 	- company
 	- has_many properties
 	- has many tenants through properties
-	- has_many maintenance_requests
 	- has_many meetings
 Tenant
 	- name
@@ -27,6 +26,7 @@ property
 	- available_rooms
 	- belongs_to a property manager
 	- has_many tenants
+	- has_many maintenance_requests
 <!-- account
 	- manager_id
 	- tenent_id
@@ -40,7 +40,7 @@ Maintenance requests
 	- completed?
 	- completed_at
 	- belongs_to tenant
-	- belongs_to manager
+	- belongs_to property
 Bill
 	- amount_due
 	- due_date
