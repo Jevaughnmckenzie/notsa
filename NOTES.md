@@ -8,7 +8,8 @@ Manager
 	- company
 	- has_many properties
 	- has many tenants through properties
-	- has_many maintenance_requests through tenants
+	- has_many maintenance_requests
+	- has_many meetings
 Tenant
 	- name
 	- email
@@ -17,6 +18,7 @@ Tenant
 	- belongs_to a property
 	- has_many bills
 	- has_many maintenance_requests
+	- has_many meetings
 
 property
 	- title
@@ -47,7 +49,9 @@ Bill
 	- payment_option
 	- paid?
 	- belongs_to tenant
-Scheduled Meetings (between manager and tenent)
+Meetings (between manager and tenent)
+	- subject
+	- description
 	- date_time
 	- manager_id
 	- tenent_id
