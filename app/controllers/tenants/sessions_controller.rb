@@ -17,5 +17,6 @@ def new
 
 	def destroy
 		session.delete :email
+		redirect_to tenants_new_path
 	end
 end
