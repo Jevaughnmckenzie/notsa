@@ -1,6 +1,6 @@
 <h1>Sign Up</h1>
 
-<%= form_for @tenant do |t| %>
+<%= form_for @tenant, url: tenants_new_path do |t| %>
 	Name: <%= t.text_field :name %><br />
 	Email: <%= t.email_field :email %><br />
 	Phone Number: <%= t.text_field :phone_number %><br />

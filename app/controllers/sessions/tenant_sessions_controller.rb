@@ -1,3 +1,0 @@
-class TenantSessionsController < ApplicationController
-
-end
