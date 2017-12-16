@@ -1,6 +1,7 @@
 class Tenants::SessionsController < ApplicationController
 
 	def new
+		@tenant = Tenant.new
 	end
 
 	def create

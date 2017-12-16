@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post '/signup', to: 'tenants/registrations#create'
   delete '/tenants/destroy', to: 'tenants/sessions#destroy'
 
+  get '/login', to: 'tenants/sessions#new'
+
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
 
   # get '/registration/new', to: 'registration#new'
