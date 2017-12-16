@@ -3,5 +3,5 @@
 <%= form_for @tenant, url: login_path do |t| %>
 	Email: <%= t.email_field :email %><br />
 	Password: <%= t.password_field :password %><br />
-	<%= t.submit %>
+	<%= t.submit "Log In!" %>
 <% end %>
