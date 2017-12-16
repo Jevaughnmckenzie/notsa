@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   delete '/tenants/destroy', to: 'tenants/sessions#destroy'
 
   get '/login', to: 'tenants/sessions#new'
+  post '/login', to: 'tenants/sessions#create'
+
 
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
 
