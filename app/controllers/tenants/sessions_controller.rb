@@ -7,6 +7,7 @@ def new
 		user = Tenant.new(tenant_params)
 		user.property = Property.all[rand(Property.count)]
 		if user.save
+			session[:email] = user.email
 			redirect_to '/'
 		else
 			
@@ -15,6 +16,6 @@ def new
 	end
 
 	def destroy
-		session.delete
+		session.delete :email
 	end
 end
