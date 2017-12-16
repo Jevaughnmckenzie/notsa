@@ -3,14 +3,14 @@ Rails.application.routes.draw do
 
   resources :tenants, only: []
 
-  get '/tenants/new', to: 'tenants/sessions#new'
-  post '/tenants', to: 'tenants/sessions#create'
+  get '/signup', to: 'tenants/registrations#new'
+  post '/signup', to: 'tenants/registrations#create'
   delete '/tenants/destroy', to: 'tenants/sessions#destroy'
 
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
 
-  get '/registration/new', to: 'registration#new'
-  post '/registration', to: 'registration#create', as: 'signup'
+  # get '/registration/new', to: 'registration#new'
+  # post '/registration', to: 'registration#create'
 
   root 'welcome#home'
 

@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 		if session[:email]
 			render 'home'
 		else
-			redirect_to '/tenants/new'
+			redirect_to '/signup'
 		end
 	end
 end
