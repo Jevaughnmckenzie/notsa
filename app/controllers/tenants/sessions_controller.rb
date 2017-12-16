@@ -16,6 +16,6 @@ class Tenants::SessionsController < ApplicationController
 
 	def destroy
 		session.delete :email
-		redirect_to signup_path
+		redirect_to login_path
 	end
 end
