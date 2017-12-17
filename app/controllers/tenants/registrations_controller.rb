@@ -5,10 +5,10 @@ class Tenants::RegistrationsController < ApplicationController
 	end
 
 	def create
-		user = Tenant.new(tenant_params)
-		user.property = Property.all[rand(Property.count)]
-		if user.save
-			session[:email] = user.email
+		@tenant = Tenant.new(tenant_params)
+		@tenant.property = Property.all[rand(Property.count)]
+		if @tenant.save
+			session[:email] = @tenant.email
 			redirect_to '/'
 		else		
 			render 'new'

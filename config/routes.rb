@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   get '/login', to: 'tenants/sessions#new'
   post '/login', to: 'tenants/sessions#create'
 
+  get '/login/property_managers', to: 'property_managers/sessions#new'
+  post '/login/property_managers', to: 'property_managers/sessions#create'
+
+
  
 
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
