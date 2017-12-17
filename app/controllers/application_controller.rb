@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  protected
+
   def current_user
   	if session[:email]
   		if tenant = Tenant.find_by(email: session[:email])

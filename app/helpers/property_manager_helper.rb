@@ -1,0 +1,2 @@
+module PropertyManagerHelper
+end
