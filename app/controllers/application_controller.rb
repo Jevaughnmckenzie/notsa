@@ -27,6 +27,10 @@ class ApplicationController < ActionController::Base
 		params.require(:tenant).permit(:name, :email, :phone_number, :password, :password_confirmation)
 	end
 
+	def property_manager_params
+		params.require(:property_manager).permit(:name, :email, :phone_number, :company, :password, :password_confirmation)
+	end
+
 end
 
 

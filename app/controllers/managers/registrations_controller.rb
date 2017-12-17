@@ -5,7 +5,7 @@ class PropertyManager::RegistrationsController < ApplicationController
 	end
 
 	def create
-		user = PropertyManager.new(tenant_params)
+		user = PropertyManager.new(property_manager_params)
 		if user.save
 			session[:email] = user.email
 			redirect_to '/'

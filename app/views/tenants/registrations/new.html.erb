@@ -1,0 +1,10 @@
+<h1>Sign Up</h1>
+
+<%= form_for @tenant, url: signup_path do |t| %>
+	Name: <%= t.text_field :name %><br />
+	Email: <%= t.email_field :email %><br />
+	Phone Number: <%= t.text_field :phone_number %><br />
+	Password: <%= t.password_field :password %><br />
+	Confirm Password <%= t.password_field :password_confirmation %><br />
+	<%= t.submit "Sign Up!" %>
+<% end %>
