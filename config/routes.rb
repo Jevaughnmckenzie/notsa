@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post '/signup', to: 'tenants/registrations#create'
   delete '/tenants/destroy', to: 'tenants/sessions#destroy'
 
+  get '/signup/property_manager', to: 'tenants/registrations#new'
+  post '/signup/property_manager', to: 'tenants/registrations#create'
+  delete '/property_manager/destroy', to: 'tenants/sessions#destroy'
+
   get '/login', to: 'tenants/sessions#new'
   post '/login', to: 'tenants/sessions#create'
 

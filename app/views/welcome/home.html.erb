@@ -1,8 +1,22 @@
-<h2>Welcome, <%= @user.name %>.</h1>
+<%= link_to 'log out', tenants_destroy_path, method: 'delete' %> 
+
+
+<h2>Welcome, <%= @user.name.capitalize %>.</h1>
 
 <h3>Residence: <%= @property.title %></h3>
+<h5><%= @property.location %></h5>
 
-<h3>Rent due: $1000</h3>
+<div>
+	<h3>Property Manager: <%= @property.property_manager.name.capitalize %></h3>
+<%= link_to "Contact #{@property.property_manager.name.capitalize}" %>
+<%= link_to "Create a Maintenance Request" %>
+<%= link_to "Schedule a meeting with #{@property.property_manager.name.capitalize}" %>
+</div> 
 
-<%= link_to 'log out', tenants_destroy_path, method: 'delete' %>
+<div>
+	<h3>Rent due: $1000</h3>
+	<%= link_to "Pay Rent" %>
+</div>
+
+
 

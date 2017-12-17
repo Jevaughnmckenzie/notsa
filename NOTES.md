@@ -70,6 +70,20 @@ Routes
 			- link to all maintenance requests
 
 
+Features
+	- home page
+		- displays welcome with name of user
+		- Tenant
+			- displays property name and location for tenant
+			- displays property manager name and contact for tenant
+			- displays next bill due and status of that bill for tenant
+			- displays link to pay bill for tenant
+			- has link to create a new maintenance request for tenant
+			- has link to schedule a meeting with property manager
+		- Manager
+			- displays link to view each property's show page
+			- displays a link to view maintenance requests
+			- displays the next upcoming scheduled meeting and also a link to all sheduled meetings
 
 
 
