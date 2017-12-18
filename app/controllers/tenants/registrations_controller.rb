@@ -1,5 +1,7 @@
 class Tenants::RegistrationsController < ApplicationController
 
+	before_action :block_current_user, only: [:new]
+
 	def new
 		@tenant = Tenant.new
 	end

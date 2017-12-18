@@ -1,5 +1,7 @@
 class PropertyManagers::SessionsController < ApplicationController
 
+	before_action :block_current_user, only: [:new]
+
 	def new
 		@manager = PropertyManager.new
 	end
