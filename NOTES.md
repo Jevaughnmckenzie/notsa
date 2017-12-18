@@ -1,4 +1,4 @@
-Project Management App
+Property Management App
 
 Manager
 	- name
@@ -84,6 +84,16 @@ Features
 			- displays link to view each property's show page
 			- displays a link to view maintenance requests
 			- displays the next upcoming scheduled meeting and also a link to all sheduled meetings
+	Properties
+	 - Manager
+	 	- index page for all properties under management
+	 	- links to each property's show page
+	 	Show pages
+	 		- Displays name of property
+	 		- displays # of rooms (total and available)
+	 		- diplays location
+	 		- displays a link to tenants index page for that property
+	 		- lists titles of active maintenance requests and links to thier respective show pages
 
 
 
