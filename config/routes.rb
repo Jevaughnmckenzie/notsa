@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :tenants, only: []
-   resources :property_managers, only: [:show]
+  resources :property_managers, only: [:show]
 
   get '/signup', to: 'tenants/registrations#new'
   post '/signup', to: 'tenants/registrations#create'
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/login/property_managers', to: 'property_managers/sessions#new'
   post '/login/property_managers', to: 'property_managers/sessions#create'
 
-
+  resources :properties, only: [:index]
  
 
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
