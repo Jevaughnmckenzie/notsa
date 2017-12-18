@@ -84,17 +84,42 @@ Features
 			- displays link to view each property's show page
 			- displays a link to view maintenance requests
 			- displays the next upcoming scheduled meeting and also a link to all sheduled meetings
-	Properties
-	 - Manager
-	 	- index page for all properties under management
-	 	- link to new properrty page on index page
-	 	- links to each property's show page
-	 	Show pages
+	- Properties
+	 	- Manager
+		 	- index page for all properties under management
+		 	- link to new properrty page on index page
+		 	- links to each property's show page
+	 	- Show pages
 	 		- Displays name of property
 	 		- displays # of rooms (total and available)
 	 		- diplays location
 	 		- displays a link to tenants index page for that property
 	 		- lists titles of active maintenance requests and links to thier respective show pages
+	- Maintenance Requests
+		- Tenant
+			- Index
+			 	- page shows all maintenance requests for the logged in tenant
+				- maintenance requests are seperated by active and inactive
+				- active are listed on top
+				- shows subject, date created, and whether it was completed
+				- subject links to the show page for the individual request
+				- link to create a new request
+				- link to cancel a request
+			- Show
+				- displays the subject, date created, completion status
+				- displays the full description
+				- link to cancel (delete)
+				- link to contact property manager
+		-	Manager
+			- Index
+				- button to 'mark completed by each subject'
+				- does not have link to create a new request
+			- show
+				- displays the subject, date created, completion status
+				- displays the full description
+				- button to mark as 'completed'
+				- maybe a link to contact tenant who made request
+
 
 
 
