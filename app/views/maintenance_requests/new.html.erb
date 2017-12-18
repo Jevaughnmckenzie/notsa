@@ -1,0 +1,7 @@
+<h2>Create a new Maintenance Request</h2>
+
+<%= form_for @request do |r| %>
+	Subject: <%= r.text_field :subject %><br />
+	Description: <%= r.text_area :description, size: "35x5" %><br />
+	<%= r.submit %>
+<% end %>

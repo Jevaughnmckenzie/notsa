@@ -9,7 +9,7 @@
 <div>
 	<h3>Property Manager: <%= @property.property_manager.name.capitalize %></h3>
 <%= link_to "Contact #{@property.property_manager.name.capitalize}" %>
-<%= link_to "Create a Maintenance Request" %>
+<%= link_to "Create a Maintenance Request", new_maintenance_request_path %>
 <%= link_to "Schedule a meeting with #{@property.property_manager.name.capitalize}" %>
 </div> 
 
