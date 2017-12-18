@@ -33,6 +33,12 @@ class ApplicationController < ActionController::Base
 		params.require(:property_manager).permit(:name, :email, :phone_number, :company, :password, :password_confirmation)
 	end
 
+  def block_current_user
+    if current_user
+      redirect_to current_user
+    end
+  end
+
 end
 
 

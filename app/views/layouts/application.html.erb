@@ -9,6 +9,7 @@
   </head>
 
   <body>
+  	<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
     <%= yield %>
   </body>
 </html>

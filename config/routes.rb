@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   post '/signup', to: 'tenants/registrations#create'
   delete '/tenants/destroy', to: 'tenants/sessions#destroy'
 
-  get '/signup/property_manager', to: 'property_managers/registrations#new'
-  post '/signup/property_manager', to: 'property_managers/registrations#create'
+  get '/signup/property_managers', to: 'property_managers/registrations#new'
+  post '/signup/property_managers', to: 'property_managers/registrations#create'
   delete '/property_manager/destroy', to: 'property_managers/sessions#destroy'
 
   get '/login', to: 'tenants/sessions#new'
