@@ -19,7 +19,15 @@ class PropertiesController < ApplicationController
 		else
 			render 'new'
 		end
+	end
 
+	def show
+		@property = Property.find(params[:id])
+	end
 
+	private 
+
+	def property_params
+		params.require(:property).permit(:title, :location, :rooms, :available_rooms )
 	end
 end

@@ -1,0 +1,15 @@
+<h2><%= @property.title %></h2>
+<h3>Location: <%= @property.location %></h3>
+<h3>Rooms: <%= @property.rooms %></h3>
+<h3>Available rooms: <%= @property.available_rooms %></h3>
+
+
+<div>
+	<h3>Tenants:</h3>
+	<ul>
+		<% @property.tenants.each do |tenant| %>
+			<li><%= link_to tenant.name, tenant %></li>
+		<% end %>
+	</ul>
+	<%= link_to 'Add tenant' %>
+</div>

@@ -1,0 +1,8 @@
+<h3>Properties under your management:</h3>
+
+<h3><%= link_to 'Add a property', new_property_path %></h3>
+<ul>
+	<% @properties.each do |property| %>
+		<li><%= link_to property.title, property_path(property) %></li>
+	<% end %>
+</ul>
