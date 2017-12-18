@@ -110,6 +110,7 @@ Features
 				- displays the full description
 				- link to cancel (delete)
 				- link to contact property manager
+				- link back to all maintenance requests
 		-	Manager
 			- Index
 				- button to 'mark completed by each subject'

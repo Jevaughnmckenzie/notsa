@@ -13,6 +13,10 @@ class MaintenanceRequestsController < ApplicationController
 		end
 	end
 
+	def show
+		@request = MaintenanceRequest.find(params[:id])
+	end
+
 	private
 
 	def maintenance_requests_params
