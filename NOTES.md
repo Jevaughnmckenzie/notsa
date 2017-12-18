@@ -87,6 +87,7 @@ Features
 	Properties
 	 - Manager
 	 	- index page for all properties under management
+	 	- link to new properrty page on index page
 	 	- links to each property's show page
 	 	Show pages
 	 		- Displays name of property
