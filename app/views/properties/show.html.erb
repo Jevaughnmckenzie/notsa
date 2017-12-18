@@ -13,3 +13,12 @@
 	</ul>
 	<%= link_to 'Add tenant' %>
 </div>
+
+<div>
+	<h3>Active Maintenance Requests:</h3>
+	<ul>
+		<% @active_maintenance_requests.each do |request| %>
+			<li><%= link_to request.subject %></li>
+		<% end %>
+	</ul>
+</div>

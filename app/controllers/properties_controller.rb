@@ -23,7 +23,9 @@ class PropertiesController < ApplicationController
 
 	def show
 		@property = Property.find(params[:id])
+		@active_maintenance_requests = @property.active_requests
 	end
+
 
 	private 
 
