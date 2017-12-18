@@ -1,10 +1,7 @@
 class WelcomeController < ApplicationController
 	def home
-		if session[:email]
-
-			@user = current_user
-			@property = current_user.property
-			render 'home'
+		if current_user
+			redirect_to current_user
 		else
 			redirect_to '/login'
 		end

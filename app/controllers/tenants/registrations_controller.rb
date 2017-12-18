@@ -11,7 +11,7 @@ class Tenants::RegistrationsController < ApplicationController
 		@tenant.property = Property.all[rand(Property.count)]
 		if @tenant.save
 			session[:email] = @tenant.email
-			redirect_to '/'
+			redirect_to @tenant
 		else		
 			render 'new'
 		end

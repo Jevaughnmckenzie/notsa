@@ -1,6 +1,6 @@
 <h1>Log in as a tenant</h1>
 
-<%= form_for @tenant, url: login_path do |t| %>
+<%= form_for @tenant, url: login_tenants_path do |t| %>
 	Email: <%= t.email_field :email %><br />
 	Password: <%= t.password_field :password %><br />
 	<%= t.submit "Log In!" %>

@@ -7,12 +7,12 @@ class Tenants::SessionsController < ApplicationController
 	end
 
 	def create
-		tenant = Tenant.find_by(email: tenant_params[:email])
-		if tenant.save
-			session[:email] = tenant.email
-			redirect_to '/'
+		@tenant = Tenant.find_by(email: tenant_params[:email])
+		if @tenant.save
+			session[:email] = @tenant.email
+			redirect_to @tenant
 		else		
-			render 'login'
+			render 'new'
 		end
 	end
 
