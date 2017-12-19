@@ -1,4 +1,9 @@
 class MaintenanceRequestsController < ApplicationController
+	
+	def index
+		@requests = current_user.maintenance_requests
+	end
+
 	def new
 		@request = MaintenanceRequest.new
 	end
@@ -17,8 +22,14 @@ class MaintenanceRequestsController < ApplicationController
 		@request = MaintenanceRequest.find(params[:id])
 	end
 
-	def index
-		@requests = current_user.maintenance_requests
+	def update
+		@request = MaintenanceRequest.find(params[:id])
+		@request.update(completed?: true)
+		redirect_to @request
+	end
+
+	def destroy
+		
 	end
 
 	private

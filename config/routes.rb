@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :properties, only: [:index, :show, :new, :create]
   resources :tenants, only: [:show]
   resources :property_managers, only: [:show]
-  resources :maintenance_requests, only: [:index, :new, :create, :show, :destroy]
+  resources :maintenance_requests, only: [:index, :new, :create, :show, :update, :destroy]
 
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
 
