@@ -6,6 +6,6 @@
 <h3>Status: <%= @request.completed? ? 'Complete' : 'Incomplete' %></h3>
 
 <%= button_to('Mark Completed',{ action: "update"}, method: :patch) if @request.completed? == false %>
-<%= button_to 'Cancel Request' %>
+<%= button_to 'Cancel Request', {}, method: :delete %>
 <%= link_to "Contact #{current_user.property_manager.name.capitalize}" %>
 <%= link_to 'View all requests', maintenance_requests_path %>

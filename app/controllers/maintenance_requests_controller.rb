@@ -29,7 +29,8 @@ class MaintenanceRequestsController < ApplicationController
 	end
 
 	def destroy
-		
+		MaintenanceRequest.find(params[:id]).destroy
+		redirect_to maintenance_requests_path
 	end
 
 	private
