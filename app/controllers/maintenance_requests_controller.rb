@@ -17,6 +17,10 @@ class MaintenanceRequestsController < ApplicationController
 		@request = MaintenanceRequest.find(params[:id])
 	end
 
+	def index
+		@requests = current_user.maintenance_requests
+	end
+
 	private
 
 	def maintenance_requests_params
