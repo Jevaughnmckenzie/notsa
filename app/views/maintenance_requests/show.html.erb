@@ -1,0 +1,11 @@
+<h2>Subject: <%= @request.subject  %></h2>
+
+<h3>Description</h3>
+<p><%= @request.description %></p>
+
+<h3>Status: <%= @request.completed? ? 'Complete' : 'Incomplete' %></h3>
+
+<%= button_to 'Mark Completed' %>
+<%= button_to 'Cancel Request' %>
+<%= link_to "Contact #{current_user.property_manager.name.capitalize}" %>
+<%= link_to 'View all requests', maintenance_requests_path %>

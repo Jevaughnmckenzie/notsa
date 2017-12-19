@@ -1,0 +1,21 @@
+<%= link_to 'Create a new maintenance request', new_maintenance_request_path %>
+
+<h2>Active requests</h2>
+ 
+	<ul>
+		<% @requests.each do |request| %>
+			<% if !request.completed? %>
+				<li><%= link_to request.subject, request  %> | <%= request.created_at %></li>
+			<% end %>
+		<% end %>
+	</ul>
+
+<h2>Inactive Requests</h2>
+
+<ul>
+		<% @requests.each do |request| %>
+			<% if request.completed? %>
+				<li><%= link_to request.subject, request  %> | <%= request.created_at %></li>
+			<% end %>
+		<% end %>
+	</ul>
