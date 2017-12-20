@@ -1,9 +1,8 @@
 class WelcomeController < ApplicationController
+	
+	before_action :block_current_user
+
 	def home
-		if current_user
-			redirect_to current_user
-		else
-			render 'welcome'
-		end
+		render 'welcome'
 	end
 end

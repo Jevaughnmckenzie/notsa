@@ -51,6 +51,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def block_manager
+    if current_user.is_a?(PropertyManager)
+      redirect_to login_tenants_path
+    end
+  end
+
 end
 
 

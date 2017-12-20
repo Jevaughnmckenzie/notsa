@@ -1,6 +1,7 @@
 class TenantsController < ApplicationController
 	before_action :block_guest
-	
+	before_action :block_tenant, only: [:new, :create]
+
 	def new
 		@tenant = Tenant.new
 	end
@@ -17,7 +18,6 @@ class TenantsController < ApplicationController
 
 	def show
 		if current_user.is_a?(Tenant)
-
 			@tenant = current_user
 			@property = current_user.property
 		elsif current_user.is_a?(PropertyManager)

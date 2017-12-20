@@ -1,12 +1,9 @@
 class PropertiesController < ApplicationController
-	before_action :block_guest
+	before_action :block_guest 
+	before_action :block_tenant, only: [:index]
 
 	def index
-		if current_user.is_a?(PropertyManager)
-			@properties = current_user.properties
-		else
-			redirect_to login_property_managers_path
-		end
+		@properties = current_user.properties
 	end
 
 	def new
