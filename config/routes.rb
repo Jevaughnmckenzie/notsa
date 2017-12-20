@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   delete '/property_manager/destroy', to: 'property_managers/sessions#destroy'
 
   resources :properties, only: [:index, :show, :new, :create]
-  resources :tenants, only: [:show]
+  resources :tenants, only: [:show, :new]
   resources :property_managers, only: [:show]
   resources :maintenance_requests, only: [:index, :new, :create, :show, :update, :destroy]
 
