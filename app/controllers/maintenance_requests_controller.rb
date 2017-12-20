@@ -1,5 +1,7 @@
 class MaintenanceRequestsController < ApplicationController
 	
+	before_action :block_guest
+
 	def index
 		if current_user.is_a?(Tenant)
 			@requests = current_user.maintenance_requests

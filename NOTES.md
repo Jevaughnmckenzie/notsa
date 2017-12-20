@@ -71,6 +71,8 @@ Routes
 
 
 Features
+	- Sessions
+		- Guest can only access login, signup, or root pages if not logged in
 	- home page
 		- displays welcome with name of user
 		- Tenant
@@ -124,7 +126,13 @@ Features
 Little Features that should not be forgotten
 	- a newly instantiated maintenance request should have its 'completed?' attribute default to 'false'
 	- when a property manager creates a new tenant from his side, their password should default to 'password'
-	
+
+
+	Testing out Maintenance requests from the manager's point of view
+		- see maintenance requests from all properties
+			- need to sub out some properties for my test manager
+			- need to stub out some tenants for manager
+				- tenants will attatch themself to a property
 
 
 

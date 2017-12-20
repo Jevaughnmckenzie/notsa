@@ -1,4 +1,5 @@
 class TenantsController < ApplicationController
+	before_action :block_guest
 	
 	def new
 		@tenant = Tenant.new

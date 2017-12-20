@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+	before_action :block_guest
+
 	def index
 		if current_user.is_a?(PropertyManager)
 			@properties = current_user.properties
