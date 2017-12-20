@@ -9,6 +9,20 @@
   </head>
 
   <body>
+
+    <nav>
+      <%= link_to 'Home', current_user %>
+      <% if current_user.is_a?(PropertyManager) %>
+        <%= link_to 'Properties', properties_path %>  
+      <% end %>
+
+      <%= link_to 'Maintenance Requests', maintenance_requests_path %>
+      <%= link_to 'Scheduled Meetings' %>
+      <%= link_to 'Invoices' %>
+      <% if current_user.is_a?(Tenant) %>
+        <%= link_to 'Contact Property Manager', contact_path %>  
+      <% end %>
+    </nav>
   	<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
     <%= yield %>
   </body>
