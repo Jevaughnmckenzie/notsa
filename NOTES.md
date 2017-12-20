@@ -121,7 +121,10 @@ Features
 				- button to mark as 'completed'
 				- maybe a link to contact tenant who made request
 
-
+Little Features that should not be forgotten
+	- a newly instantiated maintenance request should have its 'completed?' attribute default to 'false'
+	- when a property manager creates a new tenant from his side, their password should default to 'password'
+	
 
 
 

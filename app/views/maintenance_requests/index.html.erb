@@ -1,4 +1,4 @@
-<%= link_to 'Create a new maintenance request', new_maintenance_request_path %>
+<%= link_to 'Create a new maintenance request', new_maintenance_request_path if current_user.is_a?(Tenant) %>
 
 <h2>Active requests</h2>
  
