@@ -1,7 +1,11 @@
 class MaintenanceRequestsController < ApplicationController
 	
 	def index
-		@requests = current_user.maintenance_requests
+		if current_user.is_a?(Tenant)
+			@requests = current_user.maintenance_requests
+		elsif current_user.is_a?(PropertyManager)
+			@requests = current_user.properties.map { |property| property.maintenance_requests }.flatten
+		end
 	end
 
 	def new
