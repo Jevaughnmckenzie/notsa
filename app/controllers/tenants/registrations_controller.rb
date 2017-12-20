@@ -9,12 +9,7 @@ class Tenants::RegistrationsController < ApplicationController
 	def create
 		@tenant = Tenant.new(tenant_params)
 		@tenant.property = Property.all[rand(Property.count)]
-		if @tenant.save
-			session[:email] = @tenant.email
-			redirect_to @tenant
-		else		
-			render 'new'
-		end
+		create_user_model(@tenant)
 	end
 
 end

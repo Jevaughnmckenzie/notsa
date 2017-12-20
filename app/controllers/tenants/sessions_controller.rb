@@ -11,6 +11,10 @@ class Tenants::SessionsController < ApplicationController
 		if @tenant.save
 			session[:email] = @tenant.email
 			redirect_to @tenant
+		elsif @tenant.nil?
+				@tenant = Tenant.new
+				flash[:alert] = "Email or password is invalid"
+				render 'new'
 		else		
 			render 'new'
 		end

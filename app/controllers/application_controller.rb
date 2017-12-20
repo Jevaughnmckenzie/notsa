@@ -57,6 +57,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def create_user_model(model)
+    if model.save
+      session[:email] = model.email
+      redirect_to model
+    else    
+      render 'new'
+    end
+  end
+
 end
 
 
