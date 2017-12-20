@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   resources :property_managers, only: [:show]
   resources :maintenance_requests, only: [:index, :new, :create, :show, :update, :destroy]
 
+  get '/contact', to: 'property_managers#contact'
+
   # resources :'tenants/sessions', only: [:new, :create, :destroy]
 
   # get '/registration/new', to: 'registration#new'
