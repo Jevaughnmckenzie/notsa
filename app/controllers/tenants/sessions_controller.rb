@@ -18,6 +18,6 @@ class Tenants::SessionsController < ApplicationController
 
 	def destroy
 		session.delete :email
-		redirect_to login_path
+		redirect_to '/'
 	end
 end

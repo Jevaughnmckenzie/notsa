@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 		if current_user
 			redirect_to current_user
 		else
-			redirect_to '/login'
+			render 'welcome'
 		end
 	end
 end
