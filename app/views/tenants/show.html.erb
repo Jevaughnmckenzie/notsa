@@ -14,7 +14,7 @@
 </div> 
 
 <div>
-	<h3>Rent due: $1000</h3>
+	<h3>Rent due: <%= number_to_currency(@tenant.current_invoice.amount_due) %></h3>
 	<%= link_to "Pay Rent" %>
 </div>
 
