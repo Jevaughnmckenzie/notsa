@@ -9,7 +9,7 @@
 		</tr>
 	</thead>
 <tbody>
-	<% @invoices.sort { |x,y| y <=> x }.each do |invoice| %>
+	<% @invoices.sort { |x,y| y.due_date <=> x.due_date }.each do |invoice| %>
 		<tr>
 			<td><%= invoice.due_date.slice(/\d{4}(-\d{2})+/) %></td>
 			<td><%= invoice.tenant.name %></td>
