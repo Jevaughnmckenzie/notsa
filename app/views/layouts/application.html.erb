@@ -18,7 +18,7 @@
 
       <%= link_to 'Maintenance Requests', maintenance_requests_path %>
       <%= link_to 'Scheduled Meetings' %>
-      <%= link_to 'Invoices' %>
+      <%= link_to 'Invoices', invoices_path %>
       <% if current_user.is_a?(Tenant) %>
         <%= link_to 'Contact Property Manager', contact_path %>  
       <% end %>

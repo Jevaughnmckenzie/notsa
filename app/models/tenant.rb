@@ -7,4 +7,9 @@ class Tenant < ApplicationRecord
   delegate :property_manager, to: :property
 
   has_secure_password
+
+  def current_invoice
+		self.invoices.sort { |x,y| y <=> x }.first
+	end
+
 end
