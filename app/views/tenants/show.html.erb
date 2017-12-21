@@ -15,7 +15,7 @@
 
 <div>
 	<h3>Rent due: <%= @tenant.current_invoice.paid? ? number_to_currency(0.0) : number_to_currency(@tenant.current_invoice.amount_due) %></h3>
-	<%= button_to  "Pay Rent" %>
+	<%= button_to "Pay Rent", invoice_path ,method: :patch %>
 </div>
 
 

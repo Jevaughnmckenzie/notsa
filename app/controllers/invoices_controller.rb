@@ -6,4 +6,11 @@ class InvoicesController < ApplicationController
 			@invoices = current_user.tenants.map { |tenants| tenants.invoices }.flatten
 		end
   end
+
+  def update
+  	current_user.current_invoice.update(paid?: true)
+
+  	redirect_to current_user
+  end
+
 end
