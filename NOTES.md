@@ -125,7 +125,8 @@ Features
 	- Invoices
 		- Tenant
 			- home/profile page
-				- should be able to see current amount due on the 
+				- should be able to see current amount due
+				- link to pay bill should change the status of the invoice to 'Paid', and change the amount due to $0.00.
 			- Index
 				- should be able to view all their past bills and their currnt bill
 				- should see amount due, if it was late, when it was due, and when it was paid
