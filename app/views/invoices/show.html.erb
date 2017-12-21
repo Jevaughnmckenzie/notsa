@@ -1,5 +1,5 @@
-Tenant: <%= @tenant.name %>
-Amount due: <%= @invoice.amount_due %>
-Status: <%= @invoice.paid? ? 'Paid' : 'Unpaid' %>
-Late payment status: <%= @invoice.overdue? ? 'Late' : 'On time' %>
+<h2><%= @tenant.name %></h2>
+<h3>Amount due: <%= number_to_currency(@invoice.amount_due) %></h3>
+<p>Status: <%= @invoice.paid? ? 'Paid' : 'Unpaid' %></p>
+<p>Late payment status: <%= @invoice.overdue? ? 'Late' : 'On time' %></p>
 
