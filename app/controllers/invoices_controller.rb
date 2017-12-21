@@ -7,6 +7,11 @@ class InvoicesController < ApplicationController
 		end
   end
 
+  def show
+  	@invoice = Invoice.find(params[:id])
+  	@tenant = @invoice.tenant
+  end
+
   def update
   	current_user.current_invoice.update(paid?: true)
 
