@@ -122,6 +122,18 @@ Features
 				- displays the full description
 				- button to mark as 'completed'
 				- maybe a link to contact tenant who made request
+	- Invoices
+		- Tenant
+			- home/profile page
+				- should be able to see current amount due on the 
+			- Index
+				- should be able to view all their past bills and their currnt bill
+				- should see amount due, if it was late, when it was due, and when it was paid
+				- current should be listed in order with the most recent date at the top
+				- should show the invoice for the current billing cycle once again at the top with more information (overdue?)
+				- if the current billing cycle has been paid, 'amount due' should change to $0.00
+
+
 
 Little Features that should not be forgotten
 	- a newly instantiated maintenance request should have its 'completed?' attribute default to 'false'
