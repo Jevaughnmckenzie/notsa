@@ -1,0 +1,5 @@
+Tenant: <%= @tenant.name %>
+Amount due: <%= @invoice.amount_due %>
+Status: <%= @invoice.paid? ? 'Paid' : 'Unpaid' %>
+Late payment status: <%= @invoice.overdue? ? 'Late' : 'On time' %>
+
