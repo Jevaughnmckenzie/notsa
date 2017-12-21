@@ -22,6 +22,6 @@ class PropertyManagers::SessionsController < ApplicationController
 
 	def destroy
 		session.delete :email
-		redirect_to login_property_managers_path
+		redirect_to '/'
 	end
 end
