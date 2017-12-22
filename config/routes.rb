@@ -2,37 +2,22 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
- 
 
-  # get '/signup/tenants', to: 'tenants/registrations#new'
-  # post '/signup/tenants', to: 'tenants/registrations#create'
 
   namespace :tenants do
     resources :registrations, only: [:new, :create]
-    resources :sessions, only: [:new, :create]
-    
+    resources :sessions, only: [:new, :create]   
   end
 
+  resources :'tenants/sessions', only: [:destroy], as: :destroy_tenant_session
   resources :tenants, only: [:show, :new, :create]
 
-  resources :'tenants/sessions', only: [:destroy], as: :destroy_tenants_session
+ namespace :property_managers do
+    resources :registrations, only: [:new, :create]
+    resources :sessions, only: [:new, :create]
+  end
 
-  
-
-  # get '/login/tenants', to: 'tenants/sessions#new'
-  # post '/login/tenants', to: 'tenants/sessions#create'
-
-
-  get '/signup/property_managers', to: 'property_managers/registrations#new'
-  post '/signup/property_managers', to: 'property_managers/registrations#create'
-
-  # scope '/signup', module: 'property_managers' do
-  #   resources :registrations, only: [:new, :create]
-  # end
-
-  get '/login/property_managers', to: 'property_managers/sessions#new'
-  post '/login/property_managers', to: 'property_managers/sessions#create'
-  delete '/property_manager/destroy', to: 'property_managers/sessions#destroy'
+  resources :'property_managers/sessions', only: [:destroy], as: :destroy_property_manager_session
 
   resources :properties, only: [:index, :show, :new, :create]
  

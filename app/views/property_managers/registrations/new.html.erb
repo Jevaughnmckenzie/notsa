@@ -1,6 +1,6 @@
 <h1>Sign up as a property manager</h1>
 
-<%= form_for @manager, url: signup_property_managers_path do |t| %>
+<%= form_for @manager, url: property_managers_registrations_path do |t| %>
 	Name: <%= t.text_field :name %><br />
 	Email: <%= t.email_field :email %><br />
 	Phone Number: <%= t.text_field :phone_number %><br />
