@@ -18,19 +18,20 @@ Rails.application.routes.draw do
   end
 
   resources :'property_managers/sessions', only: [:destroy], as: :destroy_property_manager_session
-
-  resources :properties, only: [:index, :show, :new, :create]
  
-  resources :property_managers, only: [:show]
+  resources :property_managers, only: [:show] do 
+    resources :maintenance_requests, only: [:index]
+    resources :invoices, shallow: true
+    resources :properties, shallow: true
+    resources :tenants, shallow: true
+  end
+
+    resources :properties, only: [:index, :show, :new, :create]
+  
   resources :maintenance_requests, only: [:index, :new, :create, :show, :update, :destroy]
   resources :invoices, only: [:index, :show, :update]
 
   get '/contact', to: 'property_managers#contact'
-
-  # resources :'tenants/sessions', only: [:new, :create, :destroy]
-
-  # get '/registration/new', to: 'registration#new'
-  # post '/registration', to: 'registration#create'
 
   root 'welcome#home'
 

@@ -13,12 +13,12 @@
     <nav>
       <%= link_to 'Home', root_path %>
       <% if current_user.is_a?(PropertyManager) %>
-        <%= link_to 'Properties', properties_path %>  
+        <%= link_to 'Properties', property_manager_properties_path %>  
       <% end %>
 
       <%= link_to 'Maintenance Requests', maintenance_requests_path %>
-      <%= link_to 'Scheduled Meetings' %>
-      <%= link_to 'Invoices', invoices_path %>
+      <!-- <%= link_to 'Scheduled Meetings' %> -->
+      <%= link_to 'Invoices', invoices_path || property_manager_invoices_path %>
       <% if current_user.is_a?(Tenant) %>
         <%= link_to 'Contact Property Manager', contact_path %>  
       <% end %>
