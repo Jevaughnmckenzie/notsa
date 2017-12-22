@@ -10,13 +10,18 @@ Rails.application.routes.draw do
   namespace :tenants do
     resources :registrations, only: [:new, :create]
     resources :sessions, only: [:new, :create]
+    
   end
 
-   resources :tenants, only: [:show, :new, :create]
+  resources :tenants, only: [:show, :new, :create]
+
+  resources :'tenants/sessions', only: [:destroy], as: :destroy_tenants_session
+
+  
 
   # get '/login/tenants', to: 'tenants/sessions#new'
   # post '/login/tenants', to: 'tenants/sessions#create'
-  delete '/destroy/tenants', to: 'tenants/sessions#destroy'
+
 
   get '/signup/property_managers', to: 'property_managers/registrations#new'
   post '/signup/property_managers', to: 'property_managers/registrations#create'
