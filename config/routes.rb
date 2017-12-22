@@ -22,12 +22,12 @@ Rails.application.routes.draw do
   resources :property_managers, only: [:show] do 
     resources :maintenance_requests, only: [:index]
     resources :invoices, shallow: true
-    resources :properties, shallow: true
+    resources :properties, only: [:index, :new, :create, :destroy]
     resources :tenants, shallow: true
   end
 
-    resources :properties, only: [:index, :show, :new, :create]
-  
+    resources :properties, only: [:show]
+
   resources :maintenance_requests, only: [:index, :new, :create, :show, :update, :destroy]
   resources :invoices, only: [:index, :show, :update]
 
