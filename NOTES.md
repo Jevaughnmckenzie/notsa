@@ -124,6 +124,7 @@ Features
 				- maybe a link to contact tenant who made request
 	- Invoices
 		- Tenant
+			- A new invoice is automiatically created for a newly registered tenant. The due date is one month from the day the tenant signs up.
 			- home/profile page
 				- should be able to see current amount due
 				- link to pay bill should change the status of the invoice to 'Paid', and change the amount due to $0.00.
@@ -146,6 +147,7 @@ Little Features that should not be forgotten
 			- need to sub out some properties for my test manager
 			- need to stub out some tenants for manager
 				- tenants will attatch themself to a property
+
 
 
 
