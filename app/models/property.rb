@@ -6,5 +6,9 @@ class Property < ApplicationRecord
   def active_requests
   	self.tenants.map { |tenant| tenant.maintenance_requests }.flatten
   end
+
+  def available_rooms
+  	self.rooms - self.tenants.count
+  end
   
 end

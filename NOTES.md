@@ -150,7 +150,7 @@ Little Features that should not be forgotten
 
 TODO
 	[x] link to active maintenance requests on property show page needs href
-	[] # of available rooms should be dependent on the number of tenants listed
+	[x] # of available rooms should be dependent on the number of tenants listed
 	- on the Property Manager's side, going to the tenant show page should not show as if you are logged in as a tenant
 	- log out link should show on all pages at the top
 	- update nav links to the nested routes
