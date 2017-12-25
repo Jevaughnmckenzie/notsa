@@ -148,6 +148,13 @@ Little Features that should not be forgotten
 			- need to stub out some tenants for manager
 				- tenants will attatch themself to a property
 
+TODO
+	- link to active maintenance requests on property show page needs href
+	- # of available rooms should be dependent on the number of tenants listed
+	- on the Property Manager's side, going to the tenant show page should not show as if you are logged in as a tenant
+	- log out link should show on all pages at the top
+	- update nav links to the nested routes
+		- create a nested form for an invoice when creating a new tenant from the property manager side
 
 
 
