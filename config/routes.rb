@@ -26,7 +26,12 @@ Rails.application.routes.draw do
     resources :tenants, shallow: true
   end
 
-    resources :properties, only: [:show]
+  resources :tenants, only: [:show] do 
+    resources :maintenance_requests, shallow: true
+    resources :invoices, only: [:index]
+  end
+
+  resources :properties, only: [:show]
 
   resources :maintenance_requests, only: [:index, :new, :create, :show, :update, :destroy]
   resources :invoices, only: [:index, :show, :update]
