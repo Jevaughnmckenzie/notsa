@@ -10,5 +10,9 @@ class Property < ApplicationRecord
   def available_rooms
   	self.rooms - self.tenants.count
   end
+
+  def has_rooms?
+  	self.available_rooms > 0
+  end
   
 end

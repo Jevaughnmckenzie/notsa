@@ -28,7 +28,10 @@ class TenantsController < ApplicationController
 		end
 	end
 
-
+	def destroy
+		Tenant.find(params[:id]).delete
+		redirect_to current_user
+	end
 
 end
  

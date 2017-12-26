@@ -8,10 +8,10 @@
 	<h3>Tenants:</h3>
 	<ul>
 		<% @property.tenants.each do |tenant| %>
-			<li><%= link_to tenant.name, tenant %></li>
+			<li><%= link_to tenant.name, tenant %> <%= button_to 'Remove tenant', tenant_path(tenant), method: :delete %></li>
 		<% end %>
 	</ul>
-	<%= link_to 'Add tenant', new_tenant_path %>
+	<%= link_to 'Add tenant', new_tenant_path if @property.has_rooms? %>
 </div>
 
 <div>
