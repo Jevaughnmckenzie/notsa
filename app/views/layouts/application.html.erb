@@ -23,7 +23,7 @@
         <%= link_to 'Contact Property Manager', contact_path %>  
       <% end %>
 
-      <%= link_to('log out', (current_user.is_a?(Tenant) ? destroy_tenant_session_path : destroy_property_manager_path), method: :delete) if current_user %> 
+      <%= link_to('Log out', (current_user.is_a?(Tenant) ? destroy_tenant_session_path(current_user) : destroy_property_manager_session_path(current_user)), method: :delete) if current_user %> 
     </nav>
   	<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
     <%= yield %>
