@@ -1,6 +1,6 @@
 <h1>List a new property</h1>
 
-<%= form_for @property, url: properties_path do |t| %>
+<%= form_for @property, url: property_manager_properties_path, method: :create do |t| %>
 	Title: <%= t.text_field :title %><br />
 	Street Address: <%= t.text_field :location %><br />
 	Number of Rooms: <%= t.number_field :rooms, { step: true, min: 1 } %><br />
