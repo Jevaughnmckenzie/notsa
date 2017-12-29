@@ -4,6 +4,5 @@
 	Title: <%= t.text_field :title %><br />
 	Street Address: <%= t.text_field :location %><br />
 	Number of Rooms: <%= t.number_field :rooms, { step: true, min: 1 } %><br />
-	Rooms currently available: <%= t.number_field :available_rooms, { step: true, min: 0 } %><br />
 	<%= t.submit "List property" %>
 <% end %>
