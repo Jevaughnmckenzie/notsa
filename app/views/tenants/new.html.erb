@@ -1,6 +1,6 @@
 <h1>Create a tenant account</h1>
 
-<%= form_for @tenant, action: :create do |t| %>
+<%= form_for @tenant, url: new_property_manager_tenant_path(current_user) , method: :create do |t| %>
 	Name: <%= t.text_field :name %><br />
 	Email: <%= t.email_field :email %><br />
 	Phone Number: <%= t.text_field :phone_number %><br />
