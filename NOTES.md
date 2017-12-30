@@ -153,7 +153,7 @@ TODO
 	[x] # of available rooms should be dependent on the number of tenants listed
 	[x] should not be able to add tenants to a property with no more rooms 
 	[] on the Property Manager's side, going to the tenant show page should not show as if you are logged in as a tenant
-	[] log out link should show on all pages at the top
+	[x] log out link should show on all pages at the top
 	[] update nav links to the nested routes
 	[] create a nested form for an invoice when creating a new tenant from the property manager side
 	[] On the property manager registration page, give the option to create a new property via nested form, or select from a property without a property manager
